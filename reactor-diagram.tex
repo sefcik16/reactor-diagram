@@ -12,8 +12,9 @@
 \begin{center}
 \vspace*{\fill}
 \begin{circuitikz}
+\Large
+\draw node at (-13,35.25) [rotate=90] [color=black] {140 Reactor System Schematic};
 \tiny
-
 \foreach \j in {.5*\i}
 	\foreach \i in {1,2,...,140}
 		\draw (0,\j) node at (2,\j)[color=black] {$R_{\i}$} to [TL, i>^=$.0625"$] (4,0+\j) node at (3.25,\j)[above,color=black]			{$.0625"$};
