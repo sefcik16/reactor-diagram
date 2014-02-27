@@ -12,14 +12,16 @@
 \begin{center}
 \vspace*{\fill}
 \begin{circuitikz}
-\footnotesize 
+\Large
+\draw node at (-13,35.25) [rotate=90] [color=black] {140 Reactor System Schematic};
+\tiny
 \foreach \j in {.5*\i}
 	\foreach \i in {1,2,...,140}
-		\draw (0,\j) to [TL=$R_{\i}$, i>^=$.0625"$] (4,\j)  node[above, color=black] {$.0625"$};
+		\draw (0,\j) node at (2,\j)[color=black] {$R_{\i}$} to [TL, i>^=$.0625"$] (4,0+\j) node at (3.25,\j)[above,color=black]			{$.0625"$};
 \foreach \j in {0, 2.5, 5, 7.5,..., 67.5}
-	\draw (-1,\j+.5) rectangle (0,\j+2.5);
+	\draw (-1,\j+.5) rectangle (0,\j+2.5) node at (-.5, \j+1.5)[rotate=90][color=black] {5-way manifold};
 \foreach \j in {0,10,20,30,40,50,60}
-	\draw (-4,\j+4) rectangle (-3,\j+6.5);
+	\draw (-4,\j+4) rectangle (-3,\j+6.5) node at (-3.5,\j+5.25)[rotate=90][color=black] {4-way manifold};
 \foreach \j in {0,2.5,5,7.5}
 	\draw (-3, 5.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$}; 
 \foreach \j in {10,12.5,15,17.5}
@@ -34,9 +36,12 @@
 	\draw (-3,55.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
 \foreach \j in {60,62.5,65,67.5}
 	\draw (-3,65.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\draw (-12,34) rectangle (-10,36.5);
 \foreach \j in {0,10,20,30,40,50,60}
-	\draw (-10,35.25) -- (-4, 5.25+\j) node[above,midway, color=black] {$.25"$};
+\draw (-10,35.25) -- (-4, 5.25+\j) node[above,midway, color=black] {$.25"$};
+\footnotesize
+\draw (-12,34) node at (-11.5,35.25) [rotate=90] [color=black] {7-channel} rectangle (-10,36.5) node at (-10.5,35.25)[rotate=90][color=black]{syringe pump};
+
+	
 \end{circuitikz}
 \vspace*{\fill}
 \end{center}
