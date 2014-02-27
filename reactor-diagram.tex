@@ -22,22 +22,17 @@
 	\draw (-1,\j+.5) rectangle (0,\j+2.5) node at (-.5, \j+1.5)[rotate=90][color=black] {5-way manifold};
 \foreach \j in {0,10,20,30,40,50,60}
 	\draw (-4,\j+4) rectangle (-3,\j+6.5) node at (-3.5,\j+5.25)[rotate=90][color=black] {4-way manifold};
-\foreach \j in {0,2.5,5,7.5}
-	\draw (-3, 5.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$}; 
-\foreach \j in {10,12.5,15,17.5}
-	\draw (-3,15.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\foreach \j in {20,22.5,25,27.5}
-	\draw (-3,25.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\foreach \j in {30,32.5,35,37.5}
-	\draw (-3,35.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\foreach \j in {40,42.5,45,47.5}
-	\draw (-3,45.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\foreach \j in {50,52.5,55,57.5}
-	\draw (-3,55.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
-\foreach \j in {60,62.5,65,67.5}
-	\draw (-3,65.25) -- (-1,1.5+\j) node[above,midway, color=black] {$.125"$};
 \foreach \j in {0,10,20,30,40,50,60}
-\draw (-10,35.25) -- (-4, 5.25+\j) node[above,midway, color=black] {$.25"$};
+	\draw (-3, 5.25+\j) -- (-1,1.5+\j) node[rotate=-60][above,midway, color=black] {$.125"$}; 
+\foreach \j in {2.5,12.5,22.5,32.5,42.5,52.5,62.5}
+	\draw (-3,\j+2.75) -- (-1,1.5+\j) node[rotate=-30][above,midway, color=black] {$.125"$};
+\foreach \j in {5,15,25,35,45,55,65}
+	\draw (-3,\j+.25) -- (-1,1.5+\j) node[rotate=30][above,midway, color=black] {$.125"$};
+\foreach \j in {7.5,17.5,27.5,37.5,47.5,57.5,67.5}
+	\draw (-3,\j-2.25) -- (-1,1.5+\j) node[rotate=60][above,midway, color=black] {$.125"$};
+\foreach \j in {0,10,20,40,50,60}
+\draw (-10,35.25) -- (-4, 5.25+\j) node[right,midway, color=black] {$.25"$};
+\draw (-10,35.25) -- (-4, 35.25) node[above,midway,color=black] {$.25"$};
 \footnotesize
 \draw (-12,34) node at (-11.5,35.25) [rotate=90] [color=black] {7-channel} rectangle (-10,36.5) node at (-10.5,35.25)[rotate=90][color=black]{syringe pump};
 
